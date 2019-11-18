@@ -4,13 +4,12 @@
 # Week 12 - Part A
 
 def PrintOutput(str):
-    out = "OUTPUT %s" % (str)
-    return out
+    print("OUTPUT %s" % (str))
 
 def LoadFile(str):
     with open(str, "r") as my_file:
         ls = my_file.read().split('\n')
-        return PrintOutput(ls)
+        return ls
 
 def UpdateString(str, letter, index):
     ls = list(str)
@@ -20,7 +19,20 @@ def UpdateString(str, letter, index):
     for i in ls:
         out += i
 
-    return PrintOutput(out)
+    PrintOutput(out)
+
+def FindWordCount(ls, str):
+    count = 0
+    stLs = ""
+    for i in ls:
+        for j in i:
+            stLs += j
+        stLsNew = stLs.split()
+        for i in stLsNew:
+            if i == str:
+                count += 1
+
+    return count
 
 
 
