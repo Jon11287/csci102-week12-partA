@@ -11,3 +11,16 @@ def LoadFile(str):
     with open(str, "r") as my_file:
         ls = my_file.read().split('\n')
         return PrintOutput(ls)
+
+def UpdateString(str, letter, index):
+    ls = list(str)
+    ls[index] = letter
+    out = ""
+
+    for i in ls:
+        out += i
+
+    return PrintOutput(out)
+
+
+
