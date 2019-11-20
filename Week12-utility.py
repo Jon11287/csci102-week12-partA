@@ -47,3 +47,12 @@ def ScoreFinder(ls1, ls2, str):
         print(f"OUTPUT {nameProper} got a score of {score}")
     else:
         print("OUTPUT player not found")
+
+def Union(ls1, ls2):
+    ls3 = []
+    for i in ls1:
+        ls3.append(i)
+    for i in ls2:
+        if i not in ls3:
+            ls3.append(i)
+    return ls3
