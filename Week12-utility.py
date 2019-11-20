@@ -63,3 +63,10 @@ def Intersection(ls1, ls2):
         if i in ls2:
             ls3.append(i)
     return ls3
+
+def NotIn(ls1, ls2):
+    ls3 = []
+    for i in ls1:
+        if i not in ls2:
+            ls3.append(i)
+    return ls3
