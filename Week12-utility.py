@@ -34,5 +34,16 @@ def FindWordCount(ls, str):
 
     return count
 
-
-
+def ScoreFinder(ls1, ls2, str):
+    nameLower = str.lower()
+    nameProper = str.title()
+    if nameLower in ls1:
+        strIndex = ls1.index(nameLower)
+        score = ls2[strIndex]
+        print(f"OUTPUT {nameProper} got a score of {score}")
+    elif nameProper in ls1:
+        strIndex = ls1.index(nameProper)
+        score = ls2[strIndex]
+        print(f"OUTPUT {nameProper} got a score of {score}")
+    else:
+        print("OUTPUT player not found")
